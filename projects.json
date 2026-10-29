@@ -5,19 +5,39 @@
       "name": "RainCode Browser",
       "category": "browser",
       "stage": "development",
-      "status": "В разработке · тестовые сборки",
-      "tagline": "Браузер с собственным ритмом.",
-      "description": "Кинематографичные локальные фоны, рабочие пространства, инструменты разработчика, Rain Shield и подключение пользовательских ИИ-моделей. Приватность с понятными настройками и проверяемыми ограничениями.",
+      "status": "In development · preview builds",
+      "tagline": "A browser with its own rhythm.",
+      "description": "Cinematic local backgrounds, workspaces, developer tools, Rain Shield and user-configured AI models, with clear privacy controls.",
       "version": "0.5.23",
       "repository": "https://github.com/0xvilya/raincode-browser",
       "releases": "https://github.com/0xvilya/raincode-browser/releases",
       "source": "https://github.com/0xvilya/raincode-browser/archive/refs/heads/main.zip",
-      "features": ["Rain Shield", "Локальные модели ИИ", "DevTools", "Изолированные профили"],
-      "notice": "Тестовая версия. Полная анонимность и равенство Tor Browser не подтверждены. Публичный бинарный выпуск ожидает проверки комплектования Tor и подписи. macOS и Linux ещё не собраны и не проверены.",
+      "features": [
+        "Rain Shield",
+        "Local AI models",
+        "DevTools",
+        "Isolated profiles"
+      ],
+      "notice": "Preview software. Complete anonymity and parity with Tor Browser are not verified. Public binaries await signing and Tor licensing review; macOS and Linux builds have not been validated.",
       "downloads": [
-        {"platform": "Windows", "detail": "x64 · установщик", "status": "Публичный выпуск готовится", "url": null},
-        {"platform": "macOS", "detail": "Apple Silicon / Intel", "status": "Сборка не опубликована", "url": null},
-        {"platform": "Linux", "detail": "Дистрибутивы будут уточнены", "status": "Сборка не опубликована", "url": null}
+        {
+          "platform": "Windows",
+          "detail": "x64 · installer",
+          "status": "Public release in preparation",
+          "url": null
+        },
+        {
+          "platform": "macOS",
+          "detail": "Apple Silicon / Intel",
+          "status": "Build not published",
+          "url": null
+        },
+        {
+          "platform": "Linux",
+          "detail": "Distribution to be announced",
+          "status": "Build not published",
+          "url": null
+        }
       ]
     }
   ]

@@ -36,18 +36,18 @@ function card(project) {
   meta.append(element("span", "version", `v${project.version}`));
   const tags = element("div", "feature-tags");
   for (const feature of project.features || []) tags.append(element("span", "", feature));
-  details.append(meta, element("h3", "", project.name), element("p", "project-description", project.description), tags, element("p", "download-label", "ВЫБЕРИТЕ ВАШУ ПЛАТФОРМУ"));
+  details.append(meta, element("h3", "", project.name), element("p", "project-description", project.description), tags, element("p", "download-label", "CHOOSE YOUR PLATFORM"));
   const platforms = element("div", "platforms");
   for (const item of project.downloads || []) {
     const platform = element("div", "platform");
     platform.append(element("span", "platform-name", item.platform), element("span", "platform-detail", item.detail));
     const href = safeLink(item.url);
-    if (href) platform.append(link("Скачать ↓", href, "download"));
+    if (href) platform.append(link("Download ↓", href, "download"));
     else platform.append(element("p", "download-unavailable", item.status));
     platforms.append(platform);
   }
   const links = element("div", "project-links");
-  links.append(link("Исходный код ↗", project.repository), link("Все релизы ↗", project.releases), link("ZIP исходников ↓", project.source));
+  links.append(link("Source code ↗", project.repository), link("All releases ↗", project.releases), link("Download source ZIP ↓", project.source));
   details.append(platforms, element("p", "project-notice", project.notice), links);
   article.append(visual, details);
   return article;
@@ -55,8 +55,8 @@ function card(project) {
 function render(filter = "all") {
   const visible = projects.filter(project => filter === "all" || project.category === filter || project.stage === filter);
   list.replaceChildren(...visible.map(card));
-  if (!visible.length) list.append(element("p", "empty-state", "В этой категории пока нет проектов. Новые приложения появятся здесь после публикации."));
-  count.textContent = `${String(visible.length).padStart(2, "0")} ${visible.length === 1 ? "проект" : "проектов"}`;
+  if (!visible.length) list.append(element("p", "empty-state", "No projects in this category yet."));
+  count.textContent = `${String(visible.length).padStart(2, "0")} ${visible.length === 1 ? "project" : "projects"}`;
 }
 for (const button of document.querySelectorAll("[data-filter]")) {
   button.addEventListener("click", () => {
@@ -75,4 +75,4 @@ fetch("projects.json", { credentials: "omit" })
     projects = data.projects;
     render();
   })
-  .catch(() => { error.hidden = false; count.textContent = "Каталог недоступен"; });
+  .catch(() => { error.hidden = false; count.textContent = "Catalog unavailable"; });
