@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="My Projects — независимые приложения 0xvilya. RainCode Browser, исходный код, сборки и заметки о развитии.">
+  <meta name="theme-color" content="#08131b">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>My Projects — независимые приложения</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects">Перейти к проектам</a>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="My Projects — главная"><img src="assets/mark.svg" width="34" height="34" alt=""><span>my<span class="brand-muted">projects</span><span class="brand-dot">.</span></span></a>
+    <nav aria-label="Главная навигация"><a href="#projects">Проекты</a><a href="#approach">Подход</a><a class="github-link" href="https://github.com/0xvilya" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> INDEPENDENT SOFTWARE · BY 0XVILYA</p>
+        <h1 id="hero-title">Свои проекты.<br><span>Свой ритм.</span></h1>
+        <p class="hero-description">Приложения для работы, идей и цифровой свободы. Собираю в одном месте то, что создаю — с исходным кодом, понятными версиями и вниманием к деталям.</p>
+        <div class="hero-actions"><a class="button primary" href="#projects">Смотреть проекты <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/0xvilya" rel="noreferrer">Открыть исходный код <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-footnote"><span class="small-line"></span><span>Без аккаунта. Без аналитики. Просто проекты.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Визуальная концепция RainCode Browser">
+        <div class="art-top"><span class="tiny-mark">☂</span><span>RainCode Browser</span><span class="window-controls" aria-hidden="true">− &nbsp; □ &nbsp; ×</span></div>
+        <div class="art-address"><span aria-hidden="true">← &nbsp; ↻</span><div>⌕ &nbsp; raincode://newtab</div><span class="art-shield" aria-hidden="true">◇</span></div>
+        <div class="art-scene"><div class="rain-layer" aria-hidden="true"></div><span class="art-location">TOKYO AFTER THE RAIN</span><p>Меньше шума.<br>Больше идей.</p><div class="art-search">Поиск или адрес сайта <span aria-hidden="true">→</span></div><div class="art-shortcuts"><span>Код</span><span>Исследования</span><span>Вдохновение</span></div><div class="art-bottom"><span>Ваше пространство. Ваш ритм.</span><span>RainCode / Preview</span></div></div>
+        <span class="preview-tag">Визуальная концепция интерфейса</span>
+      </div>
+    </section>
+
+    <section class="projects-section wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">THE COLLECTION</p><h2 id="projects-title">То, над чем я работаю<span class="accent">.</span></h2></div><span class="project-count" id="project-count">01 проект</span></div>
+      <div class="project-tools"><div class="filters" aria-label="Категории проектов"><button class="filter selected" data-filter="all" aria-pressed="true">Все проекты</button><button class="filter" data-filter="browser" aria-pressed="false">Браузеры</button><button class="filter" data-filter="tools" aria-pressed="false">Инструменты</button></div><span class="catalog-label">Локальные приложения / открытый код</span></div>
+      <div id="project-list" aria-live="polite"></div>
+      <p class="load-error" id="load-error" hidden>Не удалось загрузить каталог. Обновите страницу или <a href="https://github.com/0xvilya/linexq" rel="noreferrer">откройте репозиторий RainCode</a>.</p>
+      <noscript><p class="load-error">Для каталога включите JavaScript. Исходники браузера: <a href="https://github.com/0xvilya/linexq">0xvilya/linexq</a>. Готовые файлы публикуются в разделе Releases; неподготовленные платформы не предлагаются для скачивания.</p></noscript>
+    </section>
+
+    <section class="approach wrap" id="approach" aria-labelledby="approach-title">
+      <div class="approach-intro"><p class="eyebrow">BUILT WITH INTENTION</p><h2 id="approach-title">Меньше лишнего.<br>Больше контроля.</h2><p>Не обещаю магию. Показываю, что уже работает, что проверено и что ещё предстоит сделать.</p></div>
+      <div class="principles"><article><span class="principle-number">01</span><div><h3>Исходный код открыт</h3><p>У каждого опубликованного проекта — собственный репозиторий, документация и история изменений.</p></div></article><article><span class="principle-number">02</span><div><h3>Ваши данные — на вашем устройстве</h3><p>Этот сайт не использует рекламные трекеры, внешние шрифты или аналитику. Переходы на GitHub выполняются только по вашему выбору.</p></div></article><article><span class="principle-number">03</span><div><h3>Статус без мелкого шрифта</h3><p>Экспериментальные функции и ограничения указаны явно. Ссылки появляются вместе с доступными файлами, а не раньше.</p></div></article></div>
+    </section>
+    <section class="closing wrap"><div><p class="eyebrow">BUILDING IN THE OPEN</p><h2>Следующая идея уже рядом.</h2><p>Новые проекты и обновления будут появляться здесь.</p></div><a class="button secondary" href="https://github.com/0xvilya" rel="noreferrer">Следить за разработкой <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="footer wrap"><a class="brand footer-brand" href="#">my<span class="brand-muted">projects</span><span class="brand-dot">.</span></a><p>Создаётся 0xvilya <span aria-hidden="true">·</span> спокойно, независимо, открыто</p><a href="https://github.com/0xvilya" rel="noreferrer">GitHub ↗</a></footer>
+</body>
+</html>
