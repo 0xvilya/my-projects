@@ -25,9 +25,10 @@ function link(text, url, className) {
 }
 function card(project) {
   const article = element("article", "project-card");
+  article.id = project.id;
   const visual = element("div", "project-visual");
   const top = element("div", "visual-top");
-  top.append(element("span", "project-symbol", "☂"), element("span", "project-status", project.status));
+  top.append(element("span", "project-symbol", project.id === "nexus" ? "◇" : "☂"), element("span", "project-status", project.status));
   const bottom = element("div", "visual-bottom");
   bottom.append(element("span", "", "YOUR SPACE. YOUR RHYTHM."), element("p", "", project.tagline));
   visual.append(top, bottom);
@@ -47,7 +48,13 @@ function card(project) {
     platforms.append(platform);
   }
   const links = element("div", "project-links");
-  links.append(link("Source code ↗", project.repository), link("All releases ↗", project.releases), link("Download source ZIP ↓", project.source));
+  if (safeLink(project.repository)) links.append(link("Source code ↗", project.repository));
+  if (safeLink(project.releases)) links.append(link("All releases ↗", project.releases));
+  if (safeLink(project.source)) links.append(link("Source ZIP ↓", project.source));
+  if (!links.childElementCount) links.append(element("span", "", "Source publication pending"));
+  details.append(element("p", "project-notice", project.id === "nexus"
+    ? "Works with RainCode. Bring a reviewed code report into Nexus as an AI task draft."
+    : "Works with Nexus. Export code-review findings as a handoff packet."));
   details.append(platforms, element("p", "project-notice", project.notice), links);
   article.append(visual, details);
   return article;

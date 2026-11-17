@@ -1,25 +1,13 @@
 # My Projects
 
-Статический каталог проектов 0xvilya в визуальном стиле RainCode. Чистые HTML/CSS/JavaScript, без сборки, внешних шрифтов и аналитики. Размещается в корне отдельного GitHub-репозитория и совместим с GitHub Pages.
+The English project catalog for RainCode Browser and RainForge Nexus. Static HTML, CSS and JavaScript, with local artwork and no analytics.
 
-## Запуск
+Run python -m http.server 8080 in this folder and open http://127.0.0.1:8080.
 
-Откройте папку через любой локальный HTTP-сервер, например `python -m http.server 8080`. Открытие `index.html` через `file://` может блокировать чтение каталога браузером.
+Edit projects.json to add a project. Binary download URLs must refer to uploaded release assets. Leave url as null for unavailable platforms. Source ZIP links are labelled separately. Nexus native desktop currently supports Windows. Its macOS port remains unfinished.
 
-## Добавление проектов и ссылок
+RainCode exports reviewed code findings as a rainforge.handoff.v1 JSON packet. In Nexus open Code, paste the packet under RainCode + Nexus, inspect the draft and send it. No code or browsing profile is automatically shared.
 
-Редактируйте `projects.json`. Для нового проекта добавьте объект в `projects`; поддерживаются `id`, `name`, `category`, `stage`, `status`, `tagline`, `description`, `version`, `repository`, `releases`, `source`, `features`, `notice`, `downloads`.
+The public catalog is hosted at https://0xvilya.github.io/my-projects/.
 
-У каждого элемента `downloads` задайте `platform`, `detail`, `status`, `url`. Пока проверенный файл не опубликован, оставляйте `url: null`. Сайт отобразит честный статус вместо неработающей кнопки. Когда готовый файл появится в GitHub Releases, вставьте его HTTPS-адрес в `url` и обновите статус/версию. Не используйте адреса несуществующих файлов. `app.js` принимает только HTTPS-ссылки без логина/пароля и выводит данные через `textContent`, без HTML из манифеста.
-
-На момент создания бинарные ссылки намеренно не заданы: Windows имеет локальную тестовую сборку, но публичная поставка ещё требует проверки; macOS и Linux не собраны и не проверены. Исходный код и Releases направлены в репозиторий `0xvilya/raincode-browser`, публикацией которого занимается владелец основного проекта.
-
-## Приватность
-
-Загружаются только локальные файлы сайта. Никаких запросов к GitHub API, рекламных SDK, удалённых шрифтов или сохранения данных посетителя. Переходы на GitHub выполняются по выбранным посетителем ссылкам; GitHub видит соответствующее сетевое соединение. Хостинг может вести собственные технические журналы.
-
-## Оформление и доступность
-
-Адаптивная вёрстка, видимый клавиатурный фокус, skip-link, реальная фильтрация каталога и `prefers-reduced-motion`. Анимация дождя ограничена декоративной областью. Скрипты и стили локальные; CSP исключает сторонние ресурсы и встроенные скрипты.
-
-Исходники сайта: MIT. Происхождение фоновой иллюстрации — `assets/PROVENANCE.md`.
+Source license MIT. Artwork attribution is in assets/PROVENANCE.md.

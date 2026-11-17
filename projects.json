@@ -39,6 +39,40 @@
           "url": null
         }
       ]
+    },
+    {
+      "id": "nexus",
+      "name": "RainForge Nexus",
+      "category": "tools",
+      "stage": "development",
+      "status": "Windows preview · local models",
+      "tagline": "From a request to a checked result.",
+      "description": "A local AI workspace with a desktop companion, model management, browser form tools, coding workflows, reviewed developer commands and shared memory.",
+      "version": "0.1.0",
+      "repository": null,
+      "releases": null,
+      "source": null,
+      "features": [
+        "Local GGUF models",
+        "Desktop companion",
+        "Developer console",
+        "Reviewed skills"
+      ],
+      "notice": "Windows builds have been tested locally. Public upload is pending GitHub write access. The native macOS app, real-time game control and expert SSD streaming are unfinished.",
+      "downloads": [
+        {
+          "platform": "Windows",
+          "detail": "x64 · unsigned preview",
+          "status": "Public upload pending",
+          "url": null
+        },
+        {
+          "platform": "macOS",
+          "detail": "Native desktop app",
+          "status": "Port not implemented",
+          "url": null
+        }
+      ]
     }
   ]
 }
